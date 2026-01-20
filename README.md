@@ -185,6 +185,34 @@ CORE/
 │   ├── exports/
 │   ├── gpapi-globalplatform.jar
 │   └── README.TXT
+├── 1.1/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.2/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.3/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.4/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.5/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.6/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+├── 1.7/
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
 ├── 1.8/
 │   ├── exports/
 │   ├── exports23/
