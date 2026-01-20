@@ -79,10 +79,14 @@ E:/GlobalPlatformAPIs/
 │   │   ├── gpapi-globalplatform.jar
 │   │   └── README.TXT
 │   └── 1.9/
+│       ├── diff/
 │       ├── exports/
-│       ├── exports23/
+│       ├── javadoc/
+│       ├── gpapi-globalplatform-ext.jar
 │       ├── gpapi-globalplatform.jar
-│       └── README.TXT
+│       ├── README.TXT
+│       ├── src-gpapi-globalplatform-ext.jar
+│       └── src-gpapi-globalplatform.jar
 ├── OPEN/
 │   └── 1.0/
 │       ├── exports/
@@ -219,10 +223,14 @@ CORE/
 │   ├── gpapi-globalplatform.jar
 │   └── README.TXT
 └── 1.9/
+    ├── diff/
     ├── exports/
-    ├── exports23/
+    ├── javadoc/
+    ├── gpapi-globalplatform-ext.jar
     ├── gpapi-globalplatform.jar
-    └── README.TXT
+    ├── README.TXT
+    ├── src-gpapi-globalplatform-ext.jar
+    └── src-gpapi-globalplatform.jar
 ```
 
 ## Requirements
