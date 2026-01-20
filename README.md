@@ -171,7 +171,20 @@ Interactive wizard to guide API configuration.
 
 ## Expected API Structure
 
-Each API type should follow this structure:
+### API Types
+
+The following API types are supported:
+
+1. **BROKER** - Broker API
+2. **CONTACTLESS** - Contactless API  
+3. **CORE** - Core GlobalPlatform API
+4. **OPEN** - Open API
+5. **SCPP** - SCPP API
+6. **UPGRADE** - Upgrade API
+
+### Expected Directory Structure
+
+Each API type should follow this basic structure:
 
 ```
 API_TYPE/
@@ -182,8 +195,23 @@ API_TYPE/
     └── README.TXT
 ```
 
-For example:
+### Complete API Structure Examples
+
 ```
+BROKER/
+└── 1.0/
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
+
+CONTACTLESS/
+└── 1.0/
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
+
 CORE/
 ├── 1.0/
 │   ├── exports/
@@ -231,6 +259,27 @@ CORE/
     ├── README.TXT
     ├── src-gpapi-globalplatform-ext.jar
     └── src-gpapi-globalplatform.jar
+
+OPEN/
+└── 1.0/
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
+
+SCPP/
+└── 1.0/
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
+
+UPGRADE/
+└── 1.0/
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
 ```
 
 ## Requirements
