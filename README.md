@@ -73,7 +73,12 @@ E:/GlobalPlatformAPIs/
 │   │   ├── exports/
 │   │   ├── gpapi-globalplatform.jar
 │   │   └── README.TXT
-│   └── 1.8/
+│   ├── 1.8/
+│   │   ├── exports/
+│   │   ├── exports23/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   └── 1.9/
 │       ├── exports/
 │       ├── exports23/
 │       ├── gpapi-globalplatform.jar
@@ -180,7 +185,12 @@ CORE/
 │   ├── exports/
 │   ├── gpapi-globalplatform.jar
 │   └── README.TXT
-└── 1.8/
+├── 1.8/
+│   ├── exports/
+│   ├── exports23/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
+└── 1.9/
     ├── exports/
     ├── exports23/
     ├── gpapi-globalplatform.jar
