@@ -20,9 +20,7 @@ pip install gpapis
 
 ### 1. Obtain GlobalPlatform API Specifications
 
-GlobalPlatform API specifications can be obtained from:
-- [GlobalPlatform Official Website](https://globalplatform.org/)
-- [GitHub - OpenJavaCard/globalplatform-exports](https://github.com/OpenJavaCard/globalplatform-exports) (for API exports)
+GlobalPlatform API specifications can be obtained from the GlobalPlatform Official Website.
 
 ### 2. Extract API Specifications
 
@@ -30,26 +28,74 @@ Extract the downloaded API specifications to a directory of your choice. The exp
 
 ```
 E:/GlobalPlatformAPIs/
-├── broker/
+├── BROKER/
 │   └── 1.0/
-│       └── broker_api.jar
-├── contactless/
+│       ├── exports/
+│       ├── exports23/
+│       ├── gpapi-globalplatform.jar
+│       └── README.TXT
+├── CONTACTLESS/
 │   └── 1.0/
-│       └── contactless_api.jar
-├── core/
+│       ├── exports/
+│       ├── exports23/
+│       ├── gpapi-globalplatform.jar
+│       └── README.TXT
+├── CORE/
 │   ├── 1.0/
-│   │   └── core_api.jar
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.1/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.2/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.3/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.4/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.5/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.6/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
+│   ├── 1.7/
+│   │   ├── exports/
+│   │   ├── gpapi-globalplatform.jar
+│   │   └── README.TXT
 │   └── 1.8/
-│       └── core_api.jar
-├── open/
+│       ├── exports/
+│       ├── exports23/
+│       ├── gpapi-globalplatform.jar
+│       └── README.TXT
+├── OPEN/
 │   └── 1.0/
-│       └── open_api.jar
-├── scpp/
+│       ├── exports/
+│       ├── exports23/
+│       ├── gpapi-globalplatform.jar
+│       └── README.TXT
+├── SCPP/
 │   └── 1.0/
-│       └── scpp_api.jar
-└── upgrade/
+│       ├── exports/
+│       ├── exports23/
+│       ├── gpapi-globalplatform.jar
+│       └── README.TXT
+└── UPGRADE/
     └── 1.0/
-        └── upgrade_api.jar
+        ├── exports/
+        ├── exports23/
+        ├── gpapi-globalplatform.jar
+        └── README.TXT
 ```
 
 ### 3. Configure API Path
@@ -119,18 +165,26 @@ Interactive wizard to guide API configuration.
 Each API type should follow this structure:
 
 ```
-api_type/
+API_TYPE/
 └── version/
-    └── api_files.jar
+    ├── exports/
+    ├── exports23/ (optional)
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
 ```
 
 For example:
 ```
-core/
+CORE/
 ├── 1.0/
-│   └── core_api.jar
+│   ├── exports/
+│   ├── gpapi-globalplatform.jar
+│   └── README.TXT
 └── 1.8/
-    └── core_api.jar
+    ├── exports/
+    ├── exports23/
+    ├── gpapi-globalplatform.jar
+    └── README.TXT
 ```
 
 ## Requirements

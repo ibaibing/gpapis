@@ -57,14 +57,21 @@ def get_api_resource(api_type: str, version: str, filename: str) -> str:
     if not api_root:
         return ""
     
-    if api_type.lower() not in API_TYPES:
+    api_type_lower = api_type.lower()
+    if api_type_lower not in API_TYPES:
         return ""
     
-    # Construct the expected path
-    api_path = Path(api_root) / api_type.lower() / version / filename
+    api_root_path = Path(api_root)
+    if not api_root_path.exists() or not api_root_path.is_dir():
+        return ""
     
-    if api_path.exists() and api_path.is_file():
-        return str(api_path)
+    # Try different cases for the API type directory
+    possible_api_dirs = [api_type_lower, api_type_lower.upper(), api_type_lower.capitalize()]
+    
+    for api_dir in possible_api_dirs:
+        api_path = api_root_path / api_dir / version / filename
+        if api_path.exists() and api_path.is_file():
+            return str(api_path)
     
     return ""
 
@@ -82,18 +89,27 @@ def list_api_versions(api_type: str) -> list:
     if not api_root:
         return []
     
-    if api_type.lower() not in API_TYPES:
+    api_type_lower = api_type.lower()
+    if api_type_lower not in API_TYPES:
         return []
     
-    api_path = Path(api_root) / api_type.lower()
-    if not api_path.exists() or not api_path.is_dir():
+    api_root_path = Path(api_root)
+    if not api_root_path.exists() or not api_root_path.is_dir():
         return []
     
-    try:
-        # Get all directories in the API type directory
-        return [item.name for item in api_path.iterdir() if item.is_dir()]
-    except Exception:
-        return []
+    # Try different cases for the API type directory
+    possible_api_dirs = [api_type_lower, api_type_lower.upper(), api_type_lower.capitalize()]
+    
+    for api_dir in possible_api_dirs:
+        api_path = api_root_path / api_dir
+        if api_path.exists() and api_path.is_dir():
+            try:
+                # Get all directories in the API type directory
+                return [item.name for item in api_path.iterdir() if item.is_dir()]
+            except Exception:
+                return []
+    
+    return []
 
 def get_all_resources() -> dict:
     """
