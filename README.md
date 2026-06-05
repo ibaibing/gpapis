@@ -1,5 +1,40 @@
 # gpapis - GlobalPlatform API Manager
 
+**gpapis is a library** — it manages GlobalPlatform API paths and is consumed by higher-level tools
+like [jctool](https://github.com/ibaibing/jctool) and [gpca](https://github.com/ibaibing/gpca).
+It is not a standalone application.
+
+### Toolchain Ecosystem
+
+gpapis lives at the **environment layer** of the toolchain:
+
+```
+┌──────────────────────────────────────────┐
+│  sctool (sc) — Unified CLI               │
+│  ├── sc ca (gpca) — Certificate mgmt     │
+│  └── sc jc (jctool) — JavaCard dev       │
+├──────────────────────────────────────────┤
+│  jcsdks  │  gpapis (this project)        │
+│  SDK     │  GP API path management       │
+│  (library, not standalone)               │
+├──────────────────────────────────────────┤
+│  javacard-demo — teaching example         │
+└──────────────────────────────────────────┘
+```
+
+| Project | Role |
+|---------|------|
+| [sctool](https://github.com/ibaibing/sctool) | Unified CLI entry point — `sc` |
+| [gpca](https://github.com/ibaibing/gpca) | Certificate mgmt for SCP — `sc ca` (depends on this library) |
+| [jctool](https://github.com/ibaibing/jctool) | JavaCard dev — `sc jc` (depends on this library) |
+| [jcsdks](https://github.com/ibaibing/jcsdks) | JavaCard SDK path management (library) |
+| **gpapis** | **GP API path management (this library)** |
+| [javacard-demo](https://github.com/ibaibing/javacard-demo) | Teaching example for the complete toolchain |
+
+You typically do not call `python -m gpapis` directly unless verifying API setup.
+Instead, jctool's `jc build` / `jc detect` and gpca's certificate lookups use gpapis
+internally to find GP API export files and AID information.
+
 A simple tool to help JavaCard developers configure and access GlobalPlatform API specifications.
 
 ## Features
