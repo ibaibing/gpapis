@@ -42,9 +42,15 @@ setup(
         "Programming Language :: Python :: 3.11",
     ],
     python_requires=">=3.8",
+    install_requires=[
+        "sctool>=1.0.0",
+    ],
     entry_points={
         "console_scripts": [
             "gpapis = gpapis.cli:main",
+        ],
+        "sctool.plugins": [
+            "apis = gpapis.cli:register",
         ],
     },
     keywords="globalplatform, api, javacard, smartcard",
