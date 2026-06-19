@@ -4,7 +4,7 @@ Command-line interface for gpapis.
 Provides commands to manage GlobalPlatform API specifications.
 
 Supports both standalone usage (`python -m gpapis validate`) and
-sctool plugin integration (`sc apis validate`).
+sctool plugin integration (`sc gpapis validate`).
 """
 
 import sys
@@ -205,10 +205,10 @@ def dispatch(args) -> int:
 
 
 def register() -> None:
-    """Register this module with sctool as the 'apis' plugin."""
+    """Register this module with sctool as the 'gpapis' plugin."""
     from sctool.plugin.registry import register_app
 
-    register_app("apis", dispatch)
+    register_app("gpapis", dispatch)
 
 
 if __name__ == "__main__":

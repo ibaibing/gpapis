@@ -50,7 +50,7 @@ setup(
             "gpapis = gpapis.cli:main",
         ],
         "sctool.plugins": [
-            "apis = gpapis.cli:register",
+            "gpapis = gpapis.cli:register",
         ],
     },
     keywords="globalplatform, api, javacard, smartcard",
